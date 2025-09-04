@@ -12,14 +12,14 @@ import java.time.Year;
 
 public class Libro {
         @Id
-        @Column(name="idLibro")
+        @Column(name="idlibro")
         private int idLibro;
 
         @Column(name="titulo")
         private String titulo;
 
         @Column(name="aniopublicacion")
-        private Year aniopublicacion;
+        private Year anioPublicacion;
 
         @Column(name="editorial")
         private String editorial;
@@ -49,12 +49,12 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public Year getAniopublicacion() {
-        return aniopublicacion;
+    public Year getAnioPublicacion() {
+        return anioPublicacion;
     }
 
-    public void setAniopublicacion(Year aniopublicacion) {
-        this.aniopublicacion = aniopublicacion;
+    public void setAnioPublicacion(Year anioPublicacion) {
+        this.anioPublicacion = anioPublicacion;
     }
 
     public String getEditorial() {

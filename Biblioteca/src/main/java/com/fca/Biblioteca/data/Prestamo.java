@@ -9,45 +9,43 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "prestamo")
-
-public class Prestamo extends Persona{
+public class Prestamo{
     @Id
-    @Column(name = "idPrestamo")
+    @Column(name = "idprestamo")
     private int idPrestamo;
-    @Column(name = "idPersona")
+    @Column(name = "idpersona")
     private int idPersona;
-    @Column(name = "idLibro")
+    @Column(name = "idlibro")
     private int idLibro;
-    @Column(name = fechaPrestamo)
+    @Column(name = "fechaprestamo")
     private LocalDate fechaPrestamo;
-    @Column(name = "diasPrestamo")
+    @Column(name = "diasprestamo")
     private int diasPrestamo;
 
     // Getters y Setters
-    public int getIdPrestamo() {
 
+
+    public int getIdPrestamo() {
         return idPrestamo;
     }
-    public void setIdPrestamo(int idPrestamo) {
 
+    public void setIdPrestamo(int idPrestamo) {
         this.idPrestamo = idPrestamo;
     }
 
     public int getIdPersona() {
-
         return idPersona;
     }
-    public void setIdPersona(int idPersona) {
 
+    public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
     }
 
     public int getIdLibro() {
-
         return idLibro;
     }
-    public void setIdLibro(int idLibro) {
 
+    public void setIdLibro(int idLibro) {
         this.idLibro = idLibro;
     }
 
@@ -57,5 +55,13 @@ public class Prestamo extends Persona{
 
     public void setFechaPrestamo(LocalDate fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
+    }
+
+    public int getDiasPrestamo() {
+        return diasPrestamo;
+    }
+
+    public void setDiasPrestamo(int diasPrestamo) {
+        this.diasPrestamo = diasPrestamo;
     }
 }

@@ -1,40 +1,45 @@
 package com.fca.Biblioteca.data;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "alumno")
-
-public class Alumno extends Persona {
+public class Alumno {
 
     @Id
-    @Column(name = "idAlumno")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idalumno")
     private int idAlumno;
-    @Column(name = "idPersona")
+    @Column(name = "idpersona")
     private int idPersona;
-    @Column(name = "numeroCuenta")
+    @Column(name = "numerocuenta")
     private String numeroCuenta;
 
     //Getters y Setters
-    public String getNumeroCuenta() {
 
-        return numeroCuenta;
-    }
-
-    public void setNumeroCuenta(String numeroCuenta) {
-
-        this.numeroCuenta = numeroCuenta;
-    }
 
     public int getIdAlumno() {
         return idAlumno;
     }
 
     public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
 
+    public int getIdPersona() {
+        return idPersona;
+    }
 
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
     }
 }

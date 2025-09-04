@@ -7,39 +7,40 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "autor")
-
 public class AutorLibro {
     @Id
-    @Column(name = "idAutorLibro")
+    @Column(name = "idautorlibro")
     private int idAutorLibro;
-    @Column(name = "idAutor")
+    @Column(name = "idautor")
     private int idAutor;
-    @Column(name = "idLibro")
+    @Column(name = "idlibro")
     private int idLibro;
 
     //Getters y Setters
-    public int getIdAutor() {
 
-        return idAutor;
-    }
-    public void setIdAutor(int idAutor) {
-
-        this.idAutor = idAutor;
-    }
-
-    public int getIdLibro() {
-
-        return idLibro;
-    }
-    public void setIdLibro(int idLibro) {
-
-        this.idLibro = idLibro;
-    }
 
     public int getIdAutorLibro() {
         return idAutorLibro;
     }
 
     public void setIdAutorLibro(int idAutorLibro) {
+        this.idAutorLibro = idAutorLibro;
     }
+
+    public int getIdAutor() {
+        return idAutor;
     }
+
+    public void setIdAutor(int idAutor) {
+        this.idAutor = idAutor;
+    }
+
+    public int getIdLibro() {
+        return idLibro;
+    }
+
+    public void setIdLibro(int idLibro) {
+        this.idLibro = idLibro;
+    }
+
+}

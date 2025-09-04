@@ -1,18 +1,15 @@
 package com.fca.Biblioteca.data;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="autor")
-
-public class Autor extends Persona {
+public class Autor {
     @Id
-    @Column(name = "idAutor")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "idautor")
     private int idAutor;
-    @Column(name = "idPersona")
+    @Column(name = "idpersona")
     private int idPersona;
 
     public int getIdAutor() {
@@ -23,5 +20,11 @@ public class Autor extends Persona {
         this.idAutor = idAutor;
     }
 
+    public int getIdPersona() {
+        return idPersona;
+    }
 
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
 }

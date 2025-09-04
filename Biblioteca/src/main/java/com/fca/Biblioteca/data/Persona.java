@@ -7,57 +7,48 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "persona")
-
 public class Persona {
     @Id
-    @Column(name = "idPersona")
+    @Column(name = "idpersona")
     private int idPersona;
     @Column(name = "nombre")
     private String nombre;
-    @Column(name = "primerApellido")
+    @Column(name = "primerapellido")
     private String primerApellido;
-    @Column(name = "segundoApellido")
+    @Column(name = "segundoapellido")
     private String segundoApellido;
 
     // Getters y Setters
-    public int getId() {
 
+    public int getIdPersona() {
         return idPersona;
     }
-    public void setId(int idPersona) {
 
+    public void setIdPersona(int idPersona) {
         this.idPersona = idPersona;
     }
 
     public String getNombre() {
-
-
         return nombre;
-
     }
-    public void setNombre(String nombre) {
 
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     public String getPrimerApellido() {
-
         return primerApellido;
     }
-    public void setPrimerApellido(String primerApellido){
 
+    public void setPrimerApellido(String primerApellido) {
         this.primerApellido = primerApellido;
     }
 
     public String getSegundoApellido() {
-
         return segundoApellido;
     }
-    public void setSegundoApellido(String segundoApellido) {
 
+    public void setSegundoApellido(String segundoApellido) {
         this.segundoApellido = segundoApellido;
     }
-
-
-
 }

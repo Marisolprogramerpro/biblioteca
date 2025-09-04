@@ -7,25 +7,17 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "profesor")
-
-public class Profesor extends Persona {
+public class Profesor {
     @Id
-    @Column(name = "idProfesor")
+    @Column(name = "idprofesor")
     private int idProfesor;
-    @Column(name = "idPersona")
+    @Column(name = "idpersona")
     private int idPersona;
-    @Column(name = "numeroTrabajador")
+    @Column(name = "numerotrabajador")
     private String numeroTrabajador;
 
     //Getters y Setters
-    public String getNumeroTrabajador() {
 
-        return numeroTrabajador;
-    }
-    public void setNumeroTrabajador(String numeroTrabajador) {
-
-        this.numeroTrabajador = numeroTrabajador;
-    }
 
     public int getIdProfesor() {
         return idProfesor;
@@ -33,5 +25,21 @@ public class Profesor extends Persona {
 
     public void setIdProfesor(int idProfesor) {
         this.idProfesor = idProfesor;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    public String getNumeroTrabajador() {
+        return numeroTrabajador;
+    }
+
+    public void setNumeroTrabajador(String numeroTrabajador) {
+        this.numeroTrabajador = numeroTrabajador;
     }
 }
