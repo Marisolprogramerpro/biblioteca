@@ -34,5 +34,23 @@ public class LibroDomain {
                 .collect(Collectors.toList());
 
     }
+    public List<Libro> buscarLibros(String titulo, String edicion) {
+
+        if(titulo == null || edicion == null ||
+                titulo.isEmpty() || edicion.isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        Predicate<Libro> filtroLibro = Libro -> Libro != null &&
+                Libro.getTitulo().equals(titulo) &&
+                Libro.getEdicion().equals(edicion);
+
+        return libroRepository.findAll()
+                /*sustituye a un for*/
+                .stream()
+                /*Equivale al if*/
+                .filter(filtroLibro)
+                .collect(Collectors.toList());
+    }
 
 }
