@@ -13,28 +13,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 @Controller
 public class LibroController {
-    @Autowired
-    private LibroDomain libroDomain;
-
-
+    private LibroDomain libroDomain;   //inyeccion de dependencias
     LibroController(LibroDomain libroDomain) {
         this.libroDomain = libroDomain;
     }
 
     @RequestMapping(value = "/libros-disponibles", method = RequestMethod.GET)
     @ResponseBody
-    public List<Libro> buscarLibrosDisponibles
+    public List<Libro> buscarLibroPorTitulo
             (@RequestParam String titulo, @RequestParam String edicion) {
         return libroDomain.buscarLibrosDisponibles(titulo,edicion);
     }
 
     @RequestMapping(value = "/libros", method = RequestMethod.GET)
-    public List<Libro> buscarLibros (@RequestParam String titulo, @RequestParam String edicion) {
-        return libroDomain.buscarLibros(titulo, edicion);
-        @ResponseBody
-        public List<Libro> buscarLibros
-        (@RequestParam String titulo, @RequestParam String edicion){
-            return libroDomain.buscarLibros(titulo, edicion);
-        }
+    @ResponseBody
+    public List<Libro> buscarLibro
+            (@RequestParam String titulo, @RequestParam String edicion) {
+        return libroDomain.buscarLibros(titulo,edicion);
     }
 }
